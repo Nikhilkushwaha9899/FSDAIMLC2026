@@ -64,14 +64,65 @@
 // loginVerification("0325","0325",login)
 // Callback function
 
-function checkNumber(num, clbk) {
-    clbk(num);
-}
-function oddEven(num) {
-    if (num % 2 === 0) {
-        console.log(num + " is Even");
-    } else {
-        console.log(num + " is Odd");
-    }
-}
-checkNumber(7, oddEven);
+// function checkNumber(num, clbk) {
+//     clbk(num);
+// }
+// function oddEven(num) {
+//     if (num % 2 === 0) {
+//         console.log(num + " is Even");
+//     } else {
+//         console.log(num + " is Odd");
+//     }
+// }
+// checkNumber(7, oddEven);
+
+// console.log("1");
+// setTimeout(()=>console.log("2")
+// ,1000)
+// for(let i=0;i<1000;i++){
+//     console.log("2");
+// }
+// console.log("3");
+//callbackhell
+// setTimeout(()=>{console.log("1")
+//     setTimeout(()=>{console.log("2")
+//         setTimeout(()=>{console.log("3")
+//             setTimeout(()=>{console.log("4")
+//                 setTimeout(()=>{console.log("5")
+//                     setTimeout(()=>{console.log("6")},1000)
+//                 },1000)
+//             },1000)
+//         },1000)
+//     },1000)
+// },1000)
+
+// Promises
+// const prm=new Promise((resolve,reject)=>{
+// let username="abcd";
+// let pass="abcd";
+// if(username=="abcd" && pass=="abcde"){
+// resolve("Success");
+// }
+// else{
+//     reject("Not Accepted")
+// }
+// })
+// prm.then((msg)=>{
+// console.log(msg)
+// }).catch((msg)=>{
+// console.log(msg)
+// }).finally(()=>{
+//     console.log("Finally")
+// })
+// console.log("1")
+// async function handlelogin(){
+//     console.log("2")
+//     try{
+//         await prm
+//     }catch(e){
+// console.log(e)
+//     }finally{
+//         console.log("finally")
+//     }
+// }
+// handlelogin();
