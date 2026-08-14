@@ -17,7 +17,7 @@ const employee = {
     },
     {
         "lang":"python",
-        "server":"django",
+        "server":"django", 
         "db":"sql",
     },
 ]

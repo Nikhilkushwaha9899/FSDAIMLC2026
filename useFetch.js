@@ -8,4 +8,4 @@ const jsonData=await serverdata.json();
 console.log(serverdata)
 console.log(jsonData[1].title)
 }
-bt.addEventListener('click',display);
+bt.addEventListener('click',display); 
