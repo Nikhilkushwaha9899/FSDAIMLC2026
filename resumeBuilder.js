@@ -14,13 +14,13 @@ function display() {
     div.appendChild(h1)
 
     setTimeout(() => {
-        let table = `<table border=4px style="margin:auto;">
-        <tr><th colspan=2>Resume</th></tr>
-            <tr><th>Name:</th><td>${obj.Name}</td></tr>
-            <tr><th>RollNo:</th><td>${obj.Roll}</td></tr>
-            <tr><th>Branch:</th><td>${obj.Branch}</td></tr>
-            <tr><th>College:</th><td>${obj.Clg}</td></tr>
-            <tr><th>TechStack:</th><td>${obj.TechStack}</td></tr>    
+        let table = `<table border=0px style="margin:auto;">
+        <tr><th colspan=2  style="font-size:30px;">Resume</th></tr>
+            <tr><th  style="font-size:30px;">Name:</th><td  style="font-size:30px;">${obj.Name}</td></tr>
+            <tr><th  style="font-size:30px;">RollNo:</th><td  style="font-size:30px;">${obj.Roll}</td></tr>
+            <tr><th  style="font-size:30px;">Branch:</th><td  style="font-size:30px;">${obj.Branch}</td></tr>
+            <tr><th  style="font-size:30px;">College:</th><td  style="font-size:30px;">${obj.Clg}</td></tr>
+            <tr><th  style="font-size:30px;">TechStack:</th><td  style="font-size:30px;">${obj.TechStack}</td></tr>    
         </table>`
         div.innerHTML = table;
     }, 1000)
