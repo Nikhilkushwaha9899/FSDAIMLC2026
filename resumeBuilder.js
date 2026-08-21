@@ -10,7 +10,6 @@ let obj = {
     "TechStack": "Developer",
 };
 function display() {
-    div.innerHTML = "";
     div.appendChild(h1)
 
     setTimeout(() => {
