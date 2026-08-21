@@ -2,6 +2,7 @@ const div = document.getElementById('root');
 const bt = document.getElementById('btn');
 const h1 = document.createElement('h1');
 h1.innerText = "Data Is Loading...";
+h1.style.textAlign='center';
 let obj = {
     "Name": "Nikhil",
     "Roll": 135,
@@ -13,7 +14,7 @@ function display() {
     div.appendChild(h1)
 
     setTimeout(() => {
-        let table = `<table border=4px>
+        let table = `<table border=4px style="margin:auto;">
         <tr><th colspan=2>Resume</th></tr>
             <tr><th>Name:</th><td>${obj.Name}</td></tr>
             <tr><th>RollNo:</th><td>${obj.Roll}</td></tr>
