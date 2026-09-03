@@ -1,0 +1,18 @@
+import { useState } from 'react'
+import heroImg from './assets/hero.png'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import './App.css'
+import Icard from './component/Icard'
+
+function App() {
+  
+  return (
+    <div style={{ border: '7px solid white' }}>
+    <Icard></Icard>
+    </div>
+        
+  )
+}
+
+export default App
