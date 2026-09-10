@@ -1,16 +1,16 @@
 import React from 'react'
-
+import pic from '../images/images.jpg'
 function Icard() {
-let a = 23
-let name = "Nikhil"
+
   return (
-    <div>
-    <h2 style={{backgroundColor:'aqua',color:'black'}}>Icard</h2>
-    <h2 style={{ color: 'red' }}>Welcome to React using vite </h2>
-    <h2>Value : {a}</h2>
-    <h2>Name : {name}</h2>
+    <div  style={{ border: '10px solid red',height:'420px',width:'250px',marginLeft:'200px' }}>
+    <h2 style={{backgroundColor:'aqua',color:'black'}}>ABES Enginnering College</h2>
+    <h3 style={{ color: 'red',backgroundColor:'aqua' }}>Name : Nikhil Kushwaha </h3>
+    <h3 style={{ color: 'red',backgroundColor:'aqua' }}>Roll : 2400321530135 </h3>
+    <h3 style={{ color: 'red',backgroundColor:'aqua' }}>Branch : CSE-AIML</h3>
+    <h3 style={{ color: 'red',backgroundColor:'aqua' }}>Section : C </h3>
+    <div ><img src={pic} height={'200px'} width={'250px'} style={{borderRadius:'50%'}}></img></div>
     </div>
   )
 }
-
 export default Icard
