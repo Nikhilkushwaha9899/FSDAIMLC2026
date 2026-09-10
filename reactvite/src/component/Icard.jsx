@@ -1,9 +1,9 @@
 import React from 'react'
-import pic from '../images/images.jpg'
+import pic from '../images/images.jpeg'
 function Icard() {
 
   return (
-    <div  style={{ border: '10px solid red',height:'420px',width:'250px',marginLeft:'200px' }}>
+    <div  style={{ border: '10px solid red',height:'480px',width:'250px',margin:'auto' }}>
     <h2 style={{backgroundColor:'aqua',color:'black'}}>ABES Enginnering College</h2>
     <h3 style={{ color: 'red',backgroundColor:'aqua' }}>Name : Nikhil Kushwaha </h3>
     <h3 style={{ color: 'red',backgroundColor:'aqua' }}>Roll : 2400321530135 </h3>

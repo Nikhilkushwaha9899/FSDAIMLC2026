@@ -8,7 +8,7 @@ import Icard from './component/Icard'
 function App() {
   
   return (
-    <div style={{ border: '7px solid white',height:'440px'}}>
+    <div style={{ border: '7px solid white',height:'500px'}}>
     <Icard></Icard>
     </div>
   )
