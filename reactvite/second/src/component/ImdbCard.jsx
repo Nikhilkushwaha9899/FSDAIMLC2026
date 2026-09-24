@@ -33,7 +33,7 @@ function ImdbCard() {
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', margin: '15px', gap: '10px' }}>{/*Second*/}
 
         {movies.map((movie) => (
-          <div key={movie.id} style={{ display: 'flex', flexDirection: 'row', width: '320px', border: '1px solid white' }}>
+          <div style={{ display: 'flex', flexDirection: 'row', width: '320px', border: '1px solid white' }}>
             <img src={pic} height="150px" width="150px" style={{ borderRadius: '50%' }} />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <h1 style={{ color: 'pink', margin: '10px', textAlign: 'left' }}>
