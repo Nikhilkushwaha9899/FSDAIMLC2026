@@ -6,9 +6,8 @@ import './App.css'
 import ImdbCard from './component/ImdbCard'
 
 function App() {
-
   return (
-    <div>
+    <div style={{border:'1px solid white',width:'700px',margin:'0 auto 0 auto',backgroundColor:'black'}}>
       <ImdbCard></ImdbCard>
     </div>
   )
