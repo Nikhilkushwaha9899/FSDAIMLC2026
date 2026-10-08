@@ -6,13 +6,15 @@ import './App.css'
 import Icard from './component/Icard'
 import IcardGallery from './component/IcardGallery'
 import StateHandling from './component/StateHandeling'
+import ImageManipulation from './component/ImageManipulation'
 
 function App() {
   
   return (
     <div>
     {/* <IcardGallery></IcardGallery> */}
-    <StateHandling></StateHandling>
+    {/* <StateHandling></StateHandling> */}
+    <ImageManipulation></ImageManipulation>
     </div>
   )
 }
