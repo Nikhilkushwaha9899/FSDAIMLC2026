@@ -7,6 +7,7 @@ import Icard from './component/Icard'
 import IcardGallery from './component/IcardGallery'
 import StateHandling from './component/StateHandeling'
 import ImageManipulation from './component/ImageManipulation'
+import SampleUseEffect from './component/SampleUseEffect'
 
 function App() {
   
@@ -14,7 +15,8 @@ function App() {
     <div>
     {/* <IcardGallery></IcardGallery> */}
     {/* <StateHandling></StateHandling> */}
-    <ImageManipulation></ImageManipulation>
+    {/* <ImageManipulation></ImageManipulation> */}
+    <SampleUseEffect></SampleUseEffect>
     </div>
   )
 }
