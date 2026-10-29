@@ -1,30 +1,67 @@
-import React from 'react'
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useNavigate } from 'react-router-dom';
 
+function Login({ rData }) {
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
 
-function Login() {
+  const navigate = useNavigate();
+
+  function verification(e) {
+    e.preventDefault();
+
+    if (!rData) {
+      alert('Please register first!');
+      return;
+    }
+
+    if (rData.email === email && rData.password === pass) {
+      alert('Login successful!');
+      console.log('Welcome', rData.name);
+      
+    } else {
+      alert('Invalid email or password!');
+    }
+  }
+
   return (
-    <div>
-        <h2>Login Form</h2>
-        <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></input>
-  </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Login</button>
-</form>
+    <div className="container mt-4">
+      <h2>Login Form</h2>
 
+      <form onSubmit={verification}>
+        <div className="form-group mb-3">
+          <label htmlFor="loginEmail">Email address</label>
+          <input
+            type="email"
+            className="form-control"
+            id="loginEmail"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter email"
+            required
+          />
+        </div>
+
+        <div className="form-group mb-3">
+          <label htmlFor="loginPassword">Password</label>
+          <input
+            type="password"
+            className="form-control"
+            id="loginPassword"
+            value={pass}
+            onChange={(e) => setPass(e.target.value)}
+            placeholder="Password"
+            required
+          />
+        </div>
+
+        <button type="submit" className="btn btn-primary">
+          Login
+        </button>
+      </form>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;

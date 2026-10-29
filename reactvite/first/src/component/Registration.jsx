@@ -1,35 +1,76 @@
-import React from 'react'
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useNavigate } from 'react-router-dom';
 
+function Registration({ regData }) {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
-function registration() {
+    const navigate = useNavigate();
+
+    function captureData(e) {
+        e.preventDefault();
+
+        const data = { name, email, password };
+
+        regData(data);
+
+        console.log(data);
+
+        navigate('/login');
+    }
+
     return (
-        <div>
+        <div className="container mt-4">
             <h2>Registration Form</h2>
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Name</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name"></input>
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your name with anyone else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></input>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Register</button>
-            </form>
 
+            <form onSubmit={captureData}>
+                <div className="form-group mb-3">
+                    <label htmlFor="name">Name</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Enter name"
+                        required
+                    />
+                </div>
+
+                <div className="form-group mb-3">
+                    <label htmlFor="email">Email address</label>
+                    <input
+                        type="email"
+                        className="form-control"
+                        id="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Enter email"
+                        required
+                    />
+                </div>
+
+                <div className="form-group mb-3">
+                    <label htmlFor="password">Password</label>
+                    <input
+                        type="password"
+                        className="form-control"
+                        id="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Password"
+                        required
+                    />
+                </div>
+
+                <button type="submit" className="btn btn-primary">
+                    Register
+                </button>
+            </form>
         </div>
-    )
+    );
 }
 
-export default registration
+export default Registration;
